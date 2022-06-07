@@ -1,24 +1,34 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 14:56:56
- * @LastEditTime: 2022-06-07 15:57:16
+ * @LastEditTime: 2022-06-07 18:03:59
  * @Description: 根据数组生成链表
- * 链表格式: ILinkList
+ * 链表格式: ListNode
  */
-export interface ILinkList {
+export interface IListNode {
 	val: number;
-	next?: ILinkList;
+	next?: IListNode;
+}
+
+export class ListNode {
+	val: number;
+	next?: ListNode;
+	constructor(val?: number, next?: ListNode) {
+		this.val = val === undefined ? 0 : val;
+		this.next = next === undefined ? undefined : next;
+	}
 }
 /** 根据数组生成链表
  * @param {number[]} arr
  * @return {*}
  */
-export function createLinkList(arr: number[]): ILinkList {
+export function createLinkList(arr: number[]): ListNode {
 	const len = arr.length;
 	if (!len || len === 0) throw new Error('arr not is Array or is empty');
 
-	let curNode: ILinkList = {
+	let curNode: ListNode = {
 		val: arr[len - 1],
+		next: undefined,
 	};
 	if (len === 1) return curNode;
 
