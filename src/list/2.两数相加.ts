@@ -17,8 +17,8 @@
 import { ListNode, createLinkList } from '@/utils/createLinkList';
 
 export function addTwoNumbers(
-	l1: ListNode | undefined,
-	l2: ListNode | undefined
+	l1: ListNode | null,
+	l2: ListNode | null
 ): ListNode | null {
 	let head = new ListNode(0); // 头结点
 	let tail = head; // 当前节点
@@ -33,7 +33,7 @@ export function addTwoNumbers(
 			const sum = n2 + carry;
 			new_point.val = sum % 10;
 			carry = Math.floor(sum / 10);
-			l2 = l2?.next;
+			l2 = l2!.next;
 			// l2 无节点, 只加 l1
 		} else if (!l2) {
 			const sum = n1 + carry;
@@ -59,8 +59,8 @@ export function addTwoNumbers(
 
 /* 官方解法 */
 export function addTwoNumbers2(
-	l1: ListNode | undefined,
-	l2: ListNode | undefined
+	l1: ListNode | null,
+	l2: ListNode | null
 ): ListNode | null {
 	let head: ListNode | null = null,
 		tail: ListNode | null = null;
@@ -88,8 +88,8 @@ export function addTwoNumbers2(
 
 /* 官方解法 - 个人优化 */
 export function addTwoNumbers3(
-	l1: ListNode | undefined,
-	l2: ListNode | undefined
+	l1: ListNode | null,
+	l2: ListNode | null
 ): ListNode | null {
 	let head = new ListNode(0); // 头结点
 	let tail = head; // 当前节点

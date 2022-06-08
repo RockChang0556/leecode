@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 14:56:56
- * @LastEditTime: 2022-06-07 18:03:59
+ * @LastEditTime: 2022-06-09 01:19:40
  * @Description: 根据数组生成链表
  * 链表格式: ListNode
  */
@@ -12,10 +12,10 @@ export interface IListNode {
 
 export class ListNode {
 	val: number;
-	next?: ListNode;
+	next: ListNode | null;
 	constructor(val?: number, next?: ListNode) {
 		this.val = val === undefined ? 0 : val;
-		this.next = next === undefined ? undefined : next;
+		this.next = next === undefined ? null : next;
 	}
 }
 /** 根据数组生成链表
@@ -28,7 +28,7 @@ export function createLinkList(arr: number[]): ListNode {
 
 	let curNode: ListNode = {
 		val: arr[len - 1],
-		next: undefined,
+		next: null,
 	};
 	if (len === 1) return curNode;
 
