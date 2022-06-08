@@ -22,7 +22,7 @@ describe('2.两数相加', () => {
 		expect(addTwoNumbers2(l1, l2)).toEqual(rs);
 		expect(addTwoNumbers3(l1, l2)).toEqual(rs);
 	});
-	it('边界情况, l1为0, l2为null', () => {
+	it('边界情况, l1为0, l2为空', () => {
 		const l1: ListNode = createLinkList([0]);
 		const l2: ListNode | undefined = undefined;
 		const rs = createLinkList([0]);

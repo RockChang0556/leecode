@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/2.两数相加';
+import '@/list/206.反转链表';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
