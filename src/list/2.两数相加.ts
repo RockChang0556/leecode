@@ -14,7 +14,7 @@
   链接：https://leetcode-cn.com/problems/add-two-numbers/
   */
 
-import { ListNode, createLinkList } from '@/utils/createLinkList';
+import { ListNode } from '@/utils/createLinkList';
 
 export function addTwoNumbers(
 	l1: ListNode | null,
@@ -111,8 +111,8 @@ export function addTwoNumbers3(
 	return head.next || null;
 }
 
-const l5 = createLinkList([0]);
-const l6 = createLinkList([5, 6, 4]);
-console.time('time');
-console.log('addTwoNumbers', addTwoNumbers3(l5, l6));
-console.timeEnd('time');
+// const l5 = createLinkList([0]);
+// const l6 = createLinkList([5, 6, 4]);
+// console.time('time');
+// console.log('addTwoNumbers', addTwoNumbers3(l5, l6));
+// console.timeEnd('time');

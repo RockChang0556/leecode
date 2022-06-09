@@ -45,5 +45,5 @@ export function maxSubArray2(nums: number[]): number {
 	}
 	return Math.max(...nums);
 }
-const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
-console.log(maxSubArray1(nums));
+// const nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+// console.log(maxSubArray1(nums));

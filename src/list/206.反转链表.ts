@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-06-09 00:07:36
- * @LastEditTime: 2022-06-09 01:33:10
+ * @LastEditTime: 2022-06-09 18:56:38
   
   206. 反转链表 reverse-linked-list
   给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
@@ -24,14 +24,14 @@
   链接：https://leetcode.cn/problems/reverse-linked-list
  */
 
-import { ListNode, createLinkList } from '@/utils/createLinkList';
+import { ListNode } from '@/utils/createLinkList';
 
 /** 双指针法 */
 export function reverseList(head: ListNode | null): ListNode | null {
 	if (!head || !head.next) return head;
-	let pre = null;
+	let pre: ListNode | null = null;
 	let cur: ListNode | null = head;
-	let temp = null;
+	let temp: ListNode | null = null;
 	while (cur) {
 		temp = cur.next; // 保存一下 cur的下一个节点，因为接下来要改变cur->next
 		cur.next = pre; // 反转指针
@@ -59,5 +59,20 @@ export function reverseList1(head: ListNode | null): ListNode | null {
 	return prev;
 }
 
-const l1 = createLinkList([1, 2, 3, 4]);
-console.log('[ l1 ]-35', reverseList1(l1));
+/** 递归法 - 从前往后翻转 */
+export function reverseList2(head: ListNode | null): ListNode | null {
+	function reverse(
+		prev: ListNode | null,
+		head: ListNode | null
+	): ListNode | null {
+		if (!head) return prev;
+		const temp = head.next;
+		[head.next, prev] = [prev, head];
+		return reverse(prev, temp);
+	}
+	return reverse(null, head);
+}
+
+// const l1 = createLinkList([1, 2, 3, 4]);
+// const l2 = createLinkList([4, 3, 2, 1]);
+// console.log('[ l1 ]-35', Object.is(reverseList2(l1), l2));

@@ -1,14 +1,10 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 14:56:56
- * @LastEditTime: 2022-06-09 01:19:40
+ * @LastEditTime: 2022-06-09 18:27:12
  * @Description: 根据数组生成链表
  * 链表格式: ListNode
  */
-export interface IListNode {
-	val: number;
-	next?: IListNode;
-}
 
 export class ListNode {
 	val: number;
