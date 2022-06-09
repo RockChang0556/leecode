@@ -1,15 +1,22 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 14:44:14
- * @LastEditTime: 2022-05-22 14:57:35
- * @Description: 两个数组实现简单队列
+ * @LastEditTime: 2022-06-10 01:34:35
+ * @Description: 实现简单队列
+ *
+ * Q: 链表和数组, 哪个实现队列更快 ?
+ * A: - 数组是连续存储，push 很快，shift 很慢
+ *		- 链表是非连续存储，add 和 delete 都很快（但查找很慢）
+ * 		- 结论：链表实现队列更快
  */
-export class MyQueue {
+
+import { ListNode } from './createLinkList';
+
+/** 两个数组实现队列 */
+export class QueueArray {
 	private stack1: number[] = [];
 	private stack2: number[] = [];
-	/* 
-    入队
-  */
+	/** 入队 */
 	add(n: number) {
 		this.stack1.push(n);
 	}
@@ -39,18 +46,66 @@ export class MyQueue {
 		}
 		return res || null;
 	}
-	/* 
-    获取队列长度 
-    */
+	/** 获取队列长度  */
 	get length(): number {
 		return this.stack1.length;
 	}
 }
 
-const q = new MyQueue();
-q.add(100);
-q.add(200);
-q.add(300);
-console.log('[  ]-55', q.length);
-console.log('[ q.delete() ]-56', q.delete());
-console.log('[  ]-55', q.length);
+// const q = new QueueArray();
+// q.add(100);
+// q.add(300);
+// console.log('[  ]-55', q.length);
+// console.log('[ q.delete() ]-56', q.delete());
+// console.log('[  ]-55', q.length);
+
+/** 链表实现队列
+	- 单向链表，但要同时记录 head (队头) 和 tail(队尾)
+	- 要从 tail 入队，从head 出队，否则出队时 tail 不好定位
+ 	- length 要实时记录，不可遍历链表获取, 否则时间复杂度会上升至 O(n)
+ */
+export class QueueLinkList {
+	private head: ListNode | null = null;
+	private tail: ListNode | null = null;
+	private len: number = 0;
+	/** 入队
+	 * - 从 tail 入队
+	 */
+	add(n: number) {
+		const newNode = new ListNode(n);
+		if (!this.head) this.head = newNode;
+		// 链表尾添加新节点
+		if (this.tail) {
+			this.tail.next = newNode;
+			// [this.tail.next, this.tail] = [newNode, this.tail.next];
+		}
+		// 尾指针后移
+		this.tail = newNode;
+		this.len++;
+	}
+	/** 出队
+	 * - 从 head 出队
+	 * @return {number | null} 若队列为空时出队,则返回 null,否则返回出队的那个值
+	 */
+	delete(): number | null {
+		if (this.len === 0) return null;
+		if (!this.head) return null;
+		// 取值
+		const val = this.head.val;
+		// 头指针后移, 出队
+		this.head = this.head.next;
+		this.len--;
+		return val;
+	}
+	/** 获取队列长度  */
+	get length(): number {
+		return this.len;
+	}
+}
+
+// const q = new QueueLinkList();
+// q.add(100);
+// q.add(200);
+// console.log('[  ]-55', q, q.length);
+// console.log('[ q.delete() ]-56', q.delete());
+// console.log('[  ]-55', q.length);

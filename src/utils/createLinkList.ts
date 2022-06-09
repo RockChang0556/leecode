@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 14:56:56
- * @LastEditTime: 2022-06-09 18:27:12
+ * @LastEditTime: 2022-06-10 00:29:11
  * @Description: 根据数组生成链表
  * 链表格式: ListNode
  */
@@ -16,7 +16,7 @@ export class ListNode {
 }
 /** 根据数组生成链表
  * @param {number[]} arr
- * @return {*}
+ * @return {ListNode}
  */
 export function createLinkList(arr: number[]): ListNode {
 	const len = arr.length;
