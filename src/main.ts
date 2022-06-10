@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/20.有效的括号';
+import '@/list/1.两数之和';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 

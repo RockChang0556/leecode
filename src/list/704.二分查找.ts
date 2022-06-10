@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 21:58:12
- * @LastEditTime: 2022-06-10 17:45:43
+ * @LastEditTime: 2022-06-11 00:34:29
  * 
  * 704. 二分查找
   给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
@@ -20,6 +20,12 @@
   来源：力扣（LeetCode）
   链接：https://leetcode-cn.com/problems/binary-search
  */
+
+/* 
+  笔记
+  - 凡有序, 必二分 !!!
+  - 凡二分, 时间复杂度必包含 O(logn)
+*/
 
 /** 双指针法 (更优)
  * - 时间复杂度：O(logn)，其中 n 是数组的长度。
