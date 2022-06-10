@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 15:29:51
- * @LastEditTime: 2022-06-10 14:47:31
+ * @LastEditTime: 2022-06-11 00:27:50
  * 
  	20. 有效的括号(valid-parentheses)
   给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -13,10 +13,10 @@
   链接：https://leetcode-cn.com/problems/valid-parentheses
  */
 
-/* 
-  1.利用栈先入后出的原理
-  */
-export function isValid1(s: string) {
+/** 栈 解法
+ * - 利用栈先入后出的原理
+ */
+export function isValid(s: string) {
 	let map: { [k: string]: number } = {
 		'{': 1,
 		'}': -1,
@@ -36,3 +36,30 @@ export function isValid1(s: string) {
 	}
 	return stack.length === 0;
 }
+
+/** 正则匹配 解法
+ * - 思路: 匹配成对括号并删除, 直到不能再删除, 此时若 s 长度大于0,则不匹配
+ */
+export function isValid1(s: string) {
+	const len = s.length >>> 1; // 等同于 Math.floor(s.length / 2)
+	for (let i = 0; i < len; i++) {
+		s = s.replace('()', '').replace('{}', '').replace('[]', '');
+	}
+	return s.length === 0;
+}
+
+// const s = '{{}}()[{]}';
+// console.log('[  ]-53', isValid1(s));
+
+/* 以下为性能测试 */
+/* console.time('isValid');
+for (let i = 0; i < 10 * 10000; i++) {
+	isValid(s);
+}
+console.timeEnd('isValid'); // 45 ms
+
+console.time('isValid1');
+for (let i = 0; i < 10 * 10000; i++) {
+	isValid1(s);
+}
+console.timeEnd('isValid1'); // 122 ms */

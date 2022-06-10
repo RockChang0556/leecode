@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/704.二分查找';
+import '@/list/20.有效的括号';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
