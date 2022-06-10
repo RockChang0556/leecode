@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/206.反转链表';
+import '@/list/704.二分查找';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 

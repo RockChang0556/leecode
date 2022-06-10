@@ -1,13 +1,16 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 14:44:14
- * @LastEditTime: 2022-06-10 01:34:35
+ * @LastEditTime: 2022-06-10 17:43:57
  * @Description: 实现简单队列
  *
  * Q: 链表和数组, 哪个实现队列更快 ?
  * A: - 数组是连续存储，push 很快，shift 很慢
  *		- 链表是非连续存储，add 和 delete 都很快（但查找很慢）
- * 		- 结论：链表实现队列更快
+ *		- 空间复杂度: 数组 O(n), 链表 O(n)
+ *		- add时间复杂度: 数组 O(1), 链表 O(1)
+ *		- delete时间复杂度: 数组 O(n), 链表 O(1)
+ * 		- 结论：1. 链表实现队列更快; 2. 数据结构的选择, 比算法优化更重要
  */
 
 import { ListNode } from './createLinkList';
@@ -109,3 +112,35 @@ export class QueueLinkList {
 // console.log('[  ]-55', q, q.length);
 // console.log('[ q.delete() ]-56', q.delete());
 // console.log('[  ]-55', q.length);
+
+/* 性能测试 */
+// const num = 10 * 10000;
+/* const q1 = new QueueArray();
+console.time('QueueArray');
+for (let i = 0; i < num; i++) {
+	q1.add(i);
+}
+for (let i = 0; i < num; i++) {
+	q1.delete();
+}
+console.timeEnd('QueueArray'); // 23256 ms */
+
+/* const q2 = [];
+console.time('Array');
+for (let i = 0; i < num; i++) {
+	q2.push(i);
+}
+for (let i = 0; i < num; i++) {
+	q2.shift();
+}
+console.timeEnd('Array'); // 455 ms */
+
+/* const q3 = new QueueLinkList();
+console.time('QueueLinkList');
+for (let i = 0; i < num; i++) {
+	q3.add(i);
+}
+for (let i = 0; i < num; i++) {
+	q3.delete();
+}
+console.timeEnd('QueueLinkList'); // 10 ms */
