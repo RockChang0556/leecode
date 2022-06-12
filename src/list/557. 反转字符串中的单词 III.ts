@@ -6,14 +6,15 @@
       输出："s'teL ekat edoCteeL tsetnoc"
       提示：
       在字符串中，每个单词由单个空格分隔，并且字符串中不会有任何额外的空格。
+      
       来源：力扣（LeetCode）
       链接：https://leetcode-cn.com/problems/reverse-words-in-a-string-iii
     */
 
-export function reverseWords(s) {
+export function reverseWords(s: string) {
 	return s
 		.split(' ')
-		.map((v) => {
+		.map((v: string) => {
 			// return v.split('').reverse().join('')
 			return Array.from(v).reverse().join('');
 		})

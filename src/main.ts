@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/230.二叉搜索树中第K小的元素';
+import '@/list/509.斐波那契数';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
