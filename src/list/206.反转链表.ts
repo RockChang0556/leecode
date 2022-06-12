@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-06-09 00:07:36
- * @LastEditTime: 2022-06-09 18:56:38
+ * @LastEditTime: 2022-06-12 11:59:07
   
   206. 反转链表 reverse-linked-list
   给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
@@ -26,7 +26,7 @@
 
 import { ListNode } from '@/utils/createLinkList';
 
-/** 双指针法 */
+/** 反转链表 - 双指针法 */
 export function reverseList(head: ListNode | null): ListNode | null {
 	if (!head || !head.next) return head;
 	let pre: ListNode | null = null;
@@ -42,7 +42,7 @@ export function reverseList(head: ListNode | null): ListNode | null {
 	return pre;
 }
 
-/** 双指针 - 骚操作法 */
+/** 反转链表 - 双指针 骚操作法 */
 export function reverseList1(head: ListNode | null): ListNode | null {
 	let [cur, prev]: [ListNode | null, ListNode | null] = [head, null];
 	while (cur) {
@@ -59,7 +59,7 @@ export function reverseList1(head: ListNode | null): ListNode | null {
 	return prev;
 }
 
-/** 递归法 - 从前往后翻转 */
+/** 反转链表 - 递归法 从前往后翻转 */
 export function reverseList2(head: ListNode | null): ListNode | null {
 	function reverse(
 		prev: ListNode | null,
