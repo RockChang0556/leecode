@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 20:28:31
- * @LastEditTime: 2022-06-12 12:22:52
+ * @LastEditTime: 2022-06-12 15:39:56
  * 
 	509. 斐波那契数
 	斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：
@@ -24,9 +24,12 @@
 	
 	来源：力扣（LeetCode）
 	链接：https://leetcode.cn/problems/fibonacci-number
+	
+	相同题: 70. 爬楼梯  https://leetcode.cn/problems/climbing-stairs/  F(n) = F(n - 1) + F(n - 2)
  */
 
-/** 递归
+/** 
+ * 递归
 - 时间复杂度 O(2^n)
  */
 export function fib(n: number): number {

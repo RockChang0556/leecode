@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 15:29:51
- * @LastEditTime: 2022-06-11 00:45:05
+ * @LastEditTime: 2022-06-12 15:41:55
  * 
  	20. 有效的括号(valid-parentheses)
   给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -13,7 +13,8 @@
   链接：https://leetcode-cn.com/problems/valid-parentheses
  */
 
-/** 栈 解法
+/** 
+ * 栈 解法
 - 利用栈先入后出的原理
  */
 export function isValid(s: string) {
@@ -37,7 +38,8 @@ export function isValid(s: string) {
 	return stack.length === 0;
 }
 
-/** 正则匹配 解法
+/** 
+ * 正则匹配 解法
 - 思路: 匹配成对括号并删除, 直到不能再删除, 此时若 s 长度大于0,则不匹配
  */
 export function isValid1(s: string) {

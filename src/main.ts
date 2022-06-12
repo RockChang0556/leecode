@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/509.斐波那契数';
+import '@/list/283.移动零';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 

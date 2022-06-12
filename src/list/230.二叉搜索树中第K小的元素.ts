@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-06-11 22:45:31
- * @LastEditTime: 2022-06-12 12:00:02
+ * @LastEditTime: 2022-06-12 15:43:05
  * 
   230. 二叉搜索树中第K小的元素
   给定一个二叉搜索树的根节点 root ，和一个整数 k ，请你设计一个算法查找其中第 k 个最小元素（从 1 开始计数）。
@@ -23,7 +23,7 @@
 
 import { TreeNode, inOrderTraverse } from '@/utils/binaryTree';
 
-/** 返回树的中序遍历结果的第 k 个元素 */
+/** 中序遍历, 返回第 k 个元素 */
 export function kthSmallest(root: TreeNode | null, k: number): number | null {
 	const arr = inOrderTraverse(root);
 	return arr[k - 1] || null;

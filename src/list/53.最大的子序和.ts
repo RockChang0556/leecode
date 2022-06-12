@@ -13,10 +13,9 @@
       著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
     */
 
-/** 贪心算法
+/**
+ * 贪心算法
  * 若当前指针所指元素之前的和小于0,则丢弃当前元素之前的数列
- * @param {number[]} nums
- * @return {number}
  */
 export function maxSubArray1(nums: number[]): number {
 	let curmax = 0;
@@ -34,8 +33,6 @@ export function maxSubArray1(nums: number[]): number {
 
 /** 动态规划
  * 若前一个元素大于0,则将其加到当前元素上
- * @param {number[]} nums
- * @return {number}
  */
 export function maxSubArray2(nums: number[]): number {
 	for (let i = 1; i < nums.length; i++) {

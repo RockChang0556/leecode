@@ -16,6 +16,10 @@
 
 import { ListNode } from '@/utils/createLinkList';
 
+/** 
+ * 常规解法
+- 代码较多, 易懂
+ */
 export function addTwoNumbers(
 	l1: ListNode | null,
 	l2: ListNode | null
@@ -57,7 +61,7 @@ export function addTwoNumbers(
 	return head.next || null;
 }
 
-/* 官方解法 */
+/** 官方解法 */
 export function addTwoNumbers2(
 	l1: ListNode | null,
 	l2: ListNode | null
@@ -86,7 +90,7 @@ export function addTwoNumbers2(
 	return head;
 }
 
-/* 官方解法 - 个人优化 */
+/** 官方解法 - 个人优化 */
 export function addTwoNumbers3(
 	l1: ListNode | null,
 	l2: ListNode | null
