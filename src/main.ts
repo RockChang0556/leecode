@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/283.移动零';
+import '@/list/1446.连续字符';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
