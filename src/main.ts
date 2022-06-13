@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/1446.连续字符';
+import '@/list/415.字符串相加';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
