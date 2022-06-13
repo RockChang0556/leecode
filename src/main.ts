@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/415.字符串相加';
+import '@/another/1.快速排序';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
