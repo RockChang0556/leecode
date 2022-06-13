@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/another/1.快速排序';
+import '@/list/9.回文数';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
