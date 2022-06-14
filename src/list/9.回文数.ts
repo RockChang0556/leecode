@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-06-14 01:18:11
- * @LastEditTime: 2022-06-14 01:42:03
+ * @LastEditTime: 2022-06-14 01:50:16
  * 
   9.回文数
   给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。
@@ -25,6 +25,13 @@
   来源：力扣（LeetCode）
   链接：https://leetcode.cn/problems/palindrome-number
  */
+
+/* 
+ 笔记
+  - 尽量不要转换数据结构，尤其数组这种有序结构
+  - 尽量不要用内置 API ，如 reverse 不好识别复杂度
+  - 数字操作最快，其次是字符串
+*/
 
 /**
  * 转数组再reverse比较
