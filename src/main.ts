@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/696.计数二进制子串';
+import '@/list/1556.千位分隔数';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
