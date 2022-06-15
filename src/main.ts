@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/557.反转字符串中的单词 III';
+import '@/list/696.计数二进制子串';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
