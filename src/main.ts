@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/1556.千位分隔数';
+import '@/list/35.搜索插入位置';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 

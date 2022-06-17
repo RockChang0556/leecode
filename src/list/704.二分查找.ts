@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-05-22 21:58:12
- * @LastEditTime: 2022-06-11 00:34:29
+ * @LastEditTime: 2022-06-17 16:08:36
  * 
  * 704. 二分查找
   给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
@@ -41,9 +41,9 @@ export function binarySearch(nums: number[], target: number): number {
 		if (nums[mid] === target) {
 			return mid;
 		} else if (target > nums[mid]) {
-			l = mid + 1;
+			l = mid + 1; // target 在左区间，所以 [l, mid - 1]
 		} else {
-			r = mid - 1;
+			r = mid - 1; // target 在右区间，所以 [mid + 1, r]
 		}
 	}
 	return -1;
