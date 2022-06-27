@@ -56,7 +56,7 @@ export function binarySearch(nums: number[], target: number): number {
 export function binarySearch1(nums: number[], target: number): number {
 	function search(l: number, r: number): number {
 		if (l > r) return -1;
-		let mid = Math.floor((r - l) / 2) + l;
+		let mid = ((r - l) >>> 1) + l;
 		if (nums[mid] === target) {
 			return mid;
 		} else if (target > nums[mid]) {

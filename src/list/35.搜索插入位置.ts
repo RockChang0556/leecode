@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-06-17 19:45:24
- * @LastEditTime: 2022-06-17 20:05:11
+ * @LastEditTime: 2022-06-27 19:32:33
  * 知识点: 二分查找
  * 
   35. 搜索插入位置
@@ -24,7 +24,7 @@
 
   来源：力扣（LeetCode）
   链接：https://leetcode.cn/problems/search-insert-position
-  思路: https://programmercarl.com/0035.%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE.html#%E6%80%9D%E8%B7%AF
+  思路: https://programmercarl.com/0704.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE.html#_704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE
  */
 
 /**
