@@ -1,6 +1,12 @@
+/*
+ * @Author: Rock Chang
+ * @Date: 2022-05-22 13:57:22
+ * @LastEditTime: 2022-06-28 15:56:17
+ * @Description:
+ */
 import './style.css';
 
-import '@/list/34.在排序数组中查找元素的第一个和最后一个位置';
+import '@/list/27.移除元素';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
