@@ -1,12 +1,6 @@
-/*
- * @Author: Rock Chang
- * @Date: 2022-05-22 13:57:22
- * @LastEditTime: 2022-06-28 15:56:17
- * @Description:
- */
 import './style.css';
 
-import '@/list/27.移除元素';
+import '@/list/26.删除有序数组中的重复项';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 

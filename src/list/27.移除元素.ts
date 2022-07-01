@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-06-28 15:46:41
- * @LastEditTime: 2022-06-30 15:31:39
+ * @LastEditTime: 2022-07-01 15:46:04
  * 标签: 数组 双指针
  * 
   27.移除元素
@@ -38,6 +38,6 @@ export function removeElement(nums: number[], val: number): number {
 	return l;
 }
 
-const nums = [3, 1, 1, 3, 13, 2, 2, 3],
+const nums = [3],
 	val = 3;
 console.log('[  ]-27', removeElement(nums, val), nums);
