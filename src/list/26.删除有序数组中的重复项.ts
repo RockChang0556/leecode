@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-06-30 17:52:47
- * @LastEditTime: 2022-07-01 16:04:20
+ * @LastEditTime: 2022-07-05 10:06:17
  * 标签: 数组 双指针
  * 
   26.删除有序数组中的重复项
@@ -33,8 +33,8 @@
 export function removeDuplicates(nums: number[]): number {
 	const len = nums.length;
 	if (len < 2) return len;
-	let l = 0;
-	let r = 0;
+	let l = 1;
+	let r = 1;
 	while (r <= len - 1) {
 		while (nums[r] === nums[l]) {
 			r++;
@@ -47,6 +47,24 @@ export function removeDuplicates(nums: number[]): number {
 	return l + 1;
 }
 
-// const nums = [0, 0];
-// const len = removeDuplicates(nums);
-// console.log('[  ]-32', len, nums);
+/**
+ * 双指针-优化
+- 右指针找到与左指针不一样的,将右指针的值复制到左指针，然后将左指针的值加 1，即指向下一个位置
+ */
+export function removeDuplicates1(nums: number[]): number {
+	const len = nums.length;
+	if (len < 2) return len;
+	let l = 1;
+	let r = 1;
+	while (r < len) {
+		if (nums[r] !== nums[r - 1]) {
+			nums[l] = nums[r];
+			l++;
+		}
+		r++;
+	}
+	return l;
+}
+
+// const nums = [0, 1, 1, 2];
+// const len = removeDuplicates1(nums);
