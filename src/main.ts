@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/26.删除有序数组中的重复项';
+import '@/list/977.有序数组的平方';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
