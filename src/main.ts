@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/977.有序数组的平方';
+import '@/list/209.长度最小的子数组';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
