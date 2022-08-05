@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-07-15 16:29:12
- * @LastEditTime: 2022-07-18 20:23:53
+ * @LastEditTime: 2022-08-05 18:18:38
  * @Description: 双指针 滑动窗口 
  * 
   209.长度最小的子数组
@@ -27,6 +27,9 @@
   来源：力扣（LeetCode）
   链接：https://leetcode.cn/problems/minimum-size-subarray-sum
   解法: https://programmercarl.com/0209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84.html#%E6%9A%B4%E5%8A%9B%E8%A7%A3%E6%B3%95
+
+	相似题:	904.水果成篮 https://leetcode.cn/problems/fruit-into-baskets/
+				 76.最小覆盖子串 https://leetcode.cn/problems/minimum-window-substring/
  */
 
 /**
@@ -52,7 +55,7 @@ export function minSubArrayLen(target: number, nums: number[]): number {
 }
 
 /**
- * 双指针 - 窗口滑动
+ * 双指针 - 窗口滑动(最小滑窗)
 - 时间复杂度：O(n)
  */
 export function minSubArrayLen1(target: number, nums: number[]): number {
@@ -71,6 +74,6 @@ export function minSubArrayLen1(target: number, nums: number[]): number {
 	return res === Infinity ? 0 : res;
 }
 
-const target = 4;
-const nums = [1, 4, 4];
-console.log('[  ]-40', minSubArrayLen1(target, nums));
+// const target = 4;
+// const nums = [1, 4, 4];
+// console.log('[  ]-40', minSubArrayLen1(target, nums));

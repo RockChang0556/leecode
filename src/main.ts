@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/209.长度最小的子数组';
+import '@/list/904.水果成篮';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
