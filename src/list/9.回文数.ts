@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-06-14 01:18:11
- * @LastEditTime: 2022-06-14 01:50:16
+ * @LastEditTime: 2022-10-30 22:47:48
  * 
   9.回文数
   给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。
@@ -36,7 +36,7 @@
 /**
  * 转数组再reverse比较
  */
-export function isPalindrome(x: number): boolean {
+export function isPalindrome2(x: number): boolean {
 	const s = x.toString();
 	return s === s.split('').reverse().join('');
 }
@@ -62,7 +62,7 @@ export function isPalindrome1(x: number): boolean {
 /**
  * 生成翻转数再比较 (最优)
  */
-export function isPalindrome2(x: number): boolean {
+export function isPalindrome(x: number): boolean {
 	let num = x;
 	let reverse = 0; // 翻转数
 	while (num > 0) {
@@ -83,7 +83,7 @@ export function isPalindrome2(x: number): boolean {
 for (let index = 0; index < 100 * 10000; index++) {
 	isPalindrome(x);
 }
-console.timeEnd('isPalindrome'); // 284 ms
+console.timeEnd('isPalindrome'); // 49 ms
 
 console.time('isPalindrome1');
 for (let index = 0; index < 100 * 10000; index++) {
@@ -95,4 +95,4 @@ console.time('isPalindrome2');
 for (let index = 0; index < 100 * 10000; index++) {
 	isPalindrome2(x);
 }
-console.timeEnd('isPalindrome2'); // 49 ms */
+console.timeEnd('isPalindrome2'); // 284 ms */

@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-08-04 10:44:41
- * @LastEditTime: 2022-08-05 18:08:02
+ * @LastEditTime: 2022-08-08 10:48:40
  * 双指针 滑动窗口 
 
   904.水果成篮
@@ -62,8 +62,9 @@ export function totalFruit(fruits: number[]): number {
 }
 
 // const fruits = [0, 1, 2, 2];
-const fruits = [0, 1, 6, 6, 4, 4, 6];
+/* const fruits = [0, 1, 6, 6, 4, 4, 6];
 const fruits1 = [1, 0, 1, 4, 1, 4, 1, 2, 3];
 
 console.log('expect: 5', totalFruit(fruits));
 console.log('expect: 5', totalFruit(fruits1));
+ */

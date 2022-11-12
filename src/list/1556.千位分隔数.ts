@@ -1,7 +1,7 @@
 /*
  * @Author: Rock Chang
  * @Date: 2022-06-15 20:20:17
- * @LastEditTime: 2022-06-17 14:56:58
+ * @LastEditTime: 2022-10-30 22:55:02
  * 
   1556.千位分隔数
   给你一个整数 n，请你每隔三位添加点（即 "." 符号）作为千位分隔符，并将结果以字符串格式返回。
@@ -57,14 +57,15 @@ export function thousandSeparator1(n: number): string {
 }
 
 /**
- * toLocaleString, 正则替换 ,
+ * 利用 toLocaleString API, 正则替换
+ * https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
  */
 export function thousandSeparator2(n: number): string {
 	return n.toLocaleString().replace(/\,/g, '.');
 }
 
 // const n = 8111211;
-// console.log('[ n ]-29', thousandSeparator1(n));
+// console.log('[ n ]-29', thousandSeparator2(n));
 
 /* console.time('thousandSeparator');
 for (let index = 0; index < 100 * 10000; index++) {
