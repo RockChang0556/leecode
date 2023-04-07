@@ -1,6 +1,6 @@
 import './style.css';
 
-import '@/list/1556.千位分隔数';
+import '@/list/76.最小覆盖子串';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
